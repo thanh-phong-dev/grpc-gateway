@@ -1,0 +1,34 @@
+version: "3.9"
+services:
+  postgredb:
+    container_name: postgres
+    image: postgres:latest
+    restart: always
+    environment:
+      POSTGRES_DB: profile
+      POSTGRES_PASSWORD: phong
+    ports:
+      - "5432:5432"
+    networks:
+      - my-network
+  authentication-app:
+    container_name: auth-grpc-server
+    build:
+      dockerfile: ../authentication/Dockerfile
+      context: .
+    ports:
+      - "9000:9000"
+    networks:
+      - my-network
+  gateway:
+    container_name: gateway-server
+    build:
+      dockerfile: Dockerfile
+      context: .
+    ports:
+      - "8080:8080"
+    networks:
+      - my-network
+networks:
+  my-network:
+    driver: bridge
