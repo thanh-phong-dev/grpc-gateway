@@ -11,15 +11,15 @@ services:
       - "5432:5432"
     networks:
       - my-network
-  authentication-app:
-    container_name: auth-grpc-server
-    build:
-      dockerfile: ../authentication/Dockerfile
-      context: .
-    ports:
-      - "9000:9000"
-    networks:
-      - my-network
+#  authentication-app:
+#    container_name: auth-grpc-server
+#    build:
+#      dockerfile: ../authentication/Dockerfile
+#      context: .
+#    ports:
+#      - "9000:9000"
+#    networks:
+#      - my-network
   gateway:
     container_name: gateway-server
     build:

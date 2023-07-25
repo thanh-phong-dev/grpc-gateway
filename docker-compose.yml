@@ -1,9 +1,55 @@
 version: "3.9"
 services:
-  authentication-app:
-    container_name: auth-grpc-server
+  postgredb:
+    container_name: postgres
+    image: postgres:latest
+    restart: always
+    environment:
+      POSTGRES_DB: profile
+      POSTGRES_PASSWORD: phong
+    ports:
+      - "5432:5432"
+    healthcheck:
+      test: [ "CMD", "pg_isready", "-U", "postgres" ]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+    networks:
+      - my-network
+  gateway:
+    container_name: gateway
     build:
       dockerfile: Dockerfile
-      context: .
+      context: ./gateway
+    ports:
+      - "8080:8080"
+    depends_on:
+      - authentication-app
+      - user-app
+    networks:
+      - my-network
+  authentication-app:
+    container_name: authentication-app
+    build:
+      dockerfile: Dockerfile
+      context: ./authentication
     ports:
       - "9000:9000"
+    networks:
+      - my-network
+  user-app:
+    container_name: user-app
+    build:
+      dockerfile: Dockerfile
+      context: ./user
+    ports:
+      - "9001:9001"
+    depends_on:
+      postgredb:
+        condition: service_healthy
+    networks:
+      - my-network
+
+networks:
+  my-network:
+    driver: bridge

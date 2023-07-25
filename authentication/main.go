@@ -14,7 +14,7 @@ import (
 
 const (
 	authServicePort = ":9000"
-	userServicePort = ":9001"
+	userServicePort = "user-app:9001"
 )
 
 func main() {
@@ -42,17 +42,17 @@ func main() {
 		log.Fatalf("[authenServerCreds] failed to get credential: %v", err)
 	}
 	var (
-		userService = userpb.NewUserServiceClient(userServiceConn)
-		grpcServer  = grpc.NewServer(
+		userService       = userpb.NewUserServiceClient(userServiceConn)
+		authServiceServer = service.Server{
+			UserService: userService,
+		}
+		grpcServer = grpc.NewServer(
 			grpc.Creds(authenServerCreds),
 			grpc.UnaryInterceptor(middleware.Logging),
 		)
-		s = service.Server{
-			UserService: userService,
-		}
 	)
 
-	authpb.RegisterAuthenticationServiceServer(grpcServer, &s)
+	authpb.RegisterAuthenticationServiceServer(grpcServer, &authServiceServer)
 
 	lis, err := net.Listen("tcp", authServicePort)
 	if err != nil {

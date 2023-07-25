@@ -14,8 +14,8 @@ import (
 )
 
 const (
-	authServicePort = ":9000"
-	userServicePort = ":9001"
+	authServicePort = "authentication-app:9000"
+	userServicePort = "user-app:9001"
 )
 
 func main() {

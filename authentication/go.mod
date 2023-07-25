@@ -3,6 +3,7 @@ module authentication
 go 1.19
 
 require (
+	github.com/google/uuid v1.3.0
 	github.com/joho/godotenv v1.5.1
 	google.golang.org/grpc v1.56.2
 	google.golang.org/protobuf v1.31.0

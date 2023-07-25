@@ -13,13 +13,19 @@ import (
 
 func Logging() gin.HandlerFunc {
 	return func(c *gin.Context) {
-		requestBody := readAndRestoreRequestBody(c.Request)
-		blw := &bodyLogWriter{body: bytes.NewBufferString(""), ResponseWriter: c.Writer}
+		var (
+			requestBody = readAndRestoreRequestBody(c.Request)
+			blw         = &bodyLogWriter{
+				body:           bytes.NewBufferString(""),
+				ResponseWriter: c.Writer,
+			}
+		)
+
 		c.Writer = blw
 		c.Next()
 
 		// Log the request and response details
-		fmt.Printf("[%s][%s] Body: %s | Response: %s\n",
+		fmt.Printf("[%s][%s] Request: %s | Response: %s\n",
 			c.Request.Method,
 			c.Request.URL.Path,
 			requestBody,

@@ -4,6 +4,7 @@ import (
 	"authentication/pb/authpb"
 	"authentication/pb/userpb"
 	"context"
+	"github.com/google/uuid"
 )
 
 type Server struct {
@@ -26,6 +27,6 @@ func (s *Server) Login(ctx context.Context, req *authpb.LoginRequest) (*authpb.L
 	}
 
 	return &authpb.LoginResponse{
-		Token: user.Name + "9999",
+		Token: user.Username + uuid.New().String(),
 	}, nil
 }
