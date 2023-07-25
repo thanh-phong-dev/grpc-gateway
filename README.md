@@ -3,10 +3,9 @@
 ## Build the project
 `make run`
 
-## API
+# REST API
+## User Registration
 ```sh
-1. User Registration:
-Endpoint:
 curl --location 'localhost:8080/auth/register' \
 --header 'Content-Type: application/json' \
 --data-raw '{
@@ -17,16 +16,17 @@ curl --location 'localhost:8080/auth/register' \
     "gender":"name"
 }'
 
-2. Login
-Endpoint:
+```
+## Login
+```sh
 curl --location 'localhost:8080/auth/login' \
 --header 'Content-Type: application/json' \
 --data '{
     "username":"phongnt",
     "password":"phong"
 }'
-
-3. Get user profile
-Endpoint:
+```
+## Get user profile
+```sh
 curl --location 'localhost:8080/user/2'
 ```
