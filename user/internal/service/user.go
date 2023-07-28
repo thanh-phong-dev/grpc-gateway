@@ -87,3 +87,23 @@ func (s *UserGrpcServer) GetUserInfo(ctx context.Context, userInfoRequest *userp
 		Email:    user.Email,
 	}, nil
 }
+
+func (s *UserGrpcServer) GetUserDetail(ctx context.Context, userInfoRequest *userpb.UserInfoRequest) (*userpb.UserInfoResponse, error) {
+	userCondition := model.User{
+		ID:       uint(userInfoRequest.Id),
+		Username: userInfoRequest.Username,
+	}
+
+	user, err := s.userRepo.FindOne(userCondition)
+	if err != nil {
+		return nil, err
+	}
+
+	return &userpb.UserInfoResponse{
+		Username: user.Username,
+		Password: user.Password,
+		Name:     user.Name,
+		Gender:   user.Gender,
+		Email:    user.Email,
+	}, nil
+}

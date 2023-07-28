@@ -23,7 +23,7 @@ message RegisterResponse{
 
 message UserInfoRequest {
   int64 id = 1;
-  string username = 3;
+  string username = 2;
 }
 
 message UserInfoResponse {
@@ -37,4 +37,5 @@ message UserInfoResponse {
 service UserService{
   rpc Register(RegisterRequest) returns (RegisterResponse){}
   rpc GetUserInfo(UserInfoRequest) returns (UserInfoResponse){}
+  rpc GetUserDetail(UserInfoRequest) returns (UserInfoResponse){}
 }

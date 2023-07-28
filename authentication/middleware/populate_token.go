@@ -30,8 +30,9 @@ func userServiceMethods() map[string]bool {
 	const userServicePath = "/user.UserService/"
 
 	return map[string]bool{
-		userServicePath + "GetUserInfo": true,
-		userServicePath + "Register":    false,
+		userServicePath + "GetUserInfo":   true,
+		userServicePath + "GetUserDetail": false,
+		userServicePath + "Register":      false,
 	}
 }
 

@@ -4,7 +4,6 @@ import (
 	"authentication/pb/authpb"
 	"authentication/pb/userpb"
 	"context"
-	"github.com/google/uuid"
 )
 
 type Server struct {
@@ -13,7 +12,7 @@ type Server struct {
 }
 
 func (s *Server) Login(ctx context.Context, req *authpb.LoginRequest) (*authpb.LoginResponse, error) {
-	user, err := s.UserService.GetUserInfo(ctx, &userpb.UserInfoRequest{
+	user, err := s.UserService.GetUserDetail(ctx, &userpb.UserInfoRequest{
 		Username: req.Username,
 	})
 	if err != nil {
@@ -27,6 +26,6 @@ func (s *Server) Login(ctx context.Context, req *authpb.LoginRequest) (*authpb.L
 	}
 
 	return &authpb.LoginResponse{
-		Token: user.Username + uuid.New().String(),
+		Token: "1234",
 	}, nil
 }

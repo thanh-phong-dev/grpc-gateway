@@ -5,9 +5,12 @@ syntax = "proto3";
 //    --go_opt=paths=source_relative \
 //    --proto_path=.
 // or  protoc *.proto --go_out=./ --go-grpc_out=./
+// protoc -I. --grpc-gateway_out . *.proto
 package user;
 
 option go_package="./userpb";
+
+import "google/api/annotations.proto";
 
 message RegisterRequest {
   string username = 1;
@@ -23,7 +26,7 @@ message RegisterResponse{
 
 message UserInfoRequest {
   int64 id = 1;
-  string username = 3;
+  string username = 2;
 }
 
 message UserInfoResponse {
@@ -35,6 +38,16 @@ message UserInfoResponse {
 }
 
 service UserService{
-  rpc Register(RegisterRequest) returns (RegisterResponse){}
-  rpc GetUserInfo(UserInfoRequest) returns (UserInfoResponse){}
+  rpc Register(RegisterRequest) returns (RegisterResponse){
+    option (google.api.http) = {
+      post: "/auth/register"
+      body: "*"
+    };
+  }
+  rpc GetUserInfo(UserInfoRequest) returns (UserInfoResponse){
+    option (google.api.http) = {
+      get: "/user/{id}"
+    };
+  }
+  rpc GetUserDetail(UserInfoRequest) returns (UserInfoResponse){}
 }

@@ -8,7 +8,7 @@
 //    --go_out=. \
 //    --go_opt=paths=source_relative \
 //    --proto_path=.
-// or  protoc *.proto --go_out=./ --go-grpc_out=./
+// or  protoc *.proto --go_out=./ --go-grpc_out=./ --grpc-gateway_out=../
 
 package authpb
 

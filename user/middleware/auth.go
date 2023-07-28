@@ -51,10 +51,11 @@ func authorize(ctx context.Context, method string) error {
 }
 
 func authMethods() map[string]bool {
-	const laptopServicePath = "/user.UserService/"
+	const userServicePath = "/user.UserService/"
 
 	return map[string]bool{
-		laptopServicePath + "GetUserInfo": true,
-		laptopServicePath + "Register":    false,
+		userServicePath + "GetUserInfo":  true,
+		userServicePath + "GetUseDetail": false,
+		userServicePath + "Register":     false,
 	}
 }

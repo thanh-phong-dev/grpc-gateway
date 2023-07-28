@@ -2,13 +2,12 @@ package middleware
 
 import (
 	"bytes"
+	"context"
 	"fmt"
 	"github.com/gin-gonic/gin"
 	"github.com/google/uuid"
 	"io"
-	"log"
 	"net/http"
-	"time"
 )
 
 func Logging() gin.HandlerFunc {
@@ -23,11 +22,12 @@ func Logging() gin.HandlerFunc {
 
 		c.Writer = blw
 		c.Next()
-
+		requestid, _ := c.Request.Context().Value("requestID").(string)
 		// Log the request and response details
-		fmt.Printf("[%s][%s] Request: %s | Response: %s\n",
+		fmt.Printf("[%s][%s][%s] Request: %s | Response: %s\n",
 			c.Request.Method,
 			c.Request.URL.Path,
+			requestid,
 			requestBody,
 			blw.body.String(),
 		)
@@ -37,8 +37,8 @@ func Logging() gin.HandlerFunc {
 func RequestID() gin.HandlerFunc {
 	return func(c *gin.Context) {
 		xRequestID := uuid.New().String()
-		c.Set("requestId", xRequestID)
-		log.Printf("[GIN-debug] %s [%s] - \"%s %s\"\n", time.Now().Format(time.RFC3339), xRequestID, c.Request.Method, c.Request.URL.Path)
+		ctx := context.WithValue(c.Request.Context(), "requestID", xRequestID)
+		c.Request = c.Request.WithContext(ctx)
 		c.Next()
 	}
 }

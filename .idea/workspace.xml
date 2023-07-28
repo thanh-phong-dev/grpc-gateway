@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="ALL" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="3f273cc0-a055-4bf0-b07b-77032752c319" name="Changes" comment="init source code">
+      <change beforePath="$PROJECT_DIR$/authentication/go.mod" beforeDir="false" afterPath="$PROJECT_DIR$/authentication/go.mod" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/authentication/go.sum" beforeDir="false" afterPath="$PROJECT_DIR$/authentication/go.sum" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/authentication/internal/service/auth.go" beforeDir="false" afterPath="$PROJECT_DIR$/authentication/internal/service/auth.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/authentication/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/authentication/main.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/authentication/middleware/populate_token.go" beforeDir="false" afterPath="$PROJECT_DIR$/authentication/middleware/populate_token.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/authentication/pb/auth.proto" beforeDir="false" afterPath="$PROJECT_DIR$/authentication/pb/auth.proto" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/authentication/pb/authpb/auth.pb.go" beforeDir="false" afterPath="$PROJECT_DIR$/authentication/pb/authpb/auth.pb.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/authentication/pb/authpb/auth_grpc.pb.go" beforeDir="false" afterPath="$PROJECT_DIR$/authentication/pb/authpb/auth_grpc.pb.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/authentication/pb/user.proto" beforeDir="false" afterPath="$PROJECT_DIR$/authentication/pb/user.proto" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/authentication/pb/userpb/user.pb.go" beforeDir="false" afterPath="$PROJECT_DIR$/authentication/pb/userpb/user.pb.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/authentication/pb/userpb/user_grpc.pb.go" beforeDir="false" afterPath="$PROJECT_DIR$/authentication/pb/userpb/user_grpc.pb.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gateway/go.mod" beforeDir="false" afterPath="$PROJECT_DIR$/gateway/go.mod" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gateway/go.sum" beforeDir="false" afterPath="$PROJECT_DIR$/gateway/go.sum" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gateway/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/gateway/main.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gateway/middleware/logging.go" beforeDir="false" afterPath="$PROJECT_DIR$/gateway/middleware/logging.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gateway/pb/auth.proto" beforeDir="false" afterPath="$PROJECT_DIR$/gateway/pb/auth.proto" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gateway/pb/authpb/auth.pb.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gateway/pb/authpb/auth_grpc.pb.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gateway/pb/user.proto" beforeDir="false" afterPath="$PROJECT_DIR$/gateway/pb/user.proto" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gateway/pb/userpb/user.pb.go" beforeDir="false" afterPath="$PROJECT_DIR$/gateway/pb/userpb/user.pb.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gateway/pb/userpb/user_grpc.pb.go" beforeDir="false" afterPath="$PROJECT_DIR$/gateway/pb/userpb/user_grpc.pb.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user/.env" beforeDir="false" afterPath="$PROJECT_DIR$/user/.env" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user/database/db.go" beforeDir="false" afterPath="$PROJECT_DIR$/user/database/db.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user/internal/service/user.go" beforeDir="false" afterPath="$PROJECT_DIR$/user/internal/service/user.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user/middleware/auth.go" beforeDir="false" afterPath="$PROJECT_DIR$/user/middleware/auth.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user/pb/user.proto" beforeDir="false" afterPath="$PROJECT_DIR$/user/pb/user.proto" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user/pb/userpb/user.pb.go" beforeDir="false" afterPath="$PROJECT_DIR$/user/pb/userpb/user.pb.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user/pb/userpb/user_grpc.pb.go" beforeDir="false" afterPath="$PROJECT_DIR$/user/pb/userpb/user_grpc.pb.go" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Go File" />
+      </list>
+    </option>
+  </component>
+  <component name="GOROOT" url="file://$USER_HOME$/sdk/go1.19" />
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GoLibraries">
+    <option name="indexEntireGoPath" value="true" />
+    <option name="urls">
+      <list>
+        <option value="file://$PROJECT_DIR$/.." />
+      </list>
+    </option>
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="2SpJWheqDsBsNJGK3BZ7VlcoAhe" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "DefaultGoTemplateProperty": "Go File",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.go.formatter.settings.were.checked": "true",
+    "RunOnceActivity.go.migrated.go.modules.settings": "true",
+    "RunOnceActivity.go.modules.go.list.on.any.changes.was.set": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "git-widget-placeholder": "add-grpc-gateway",
+    "go.import.settings.migrated": "true",
+    "go.sdk.automatically.set": "true",
+    "last_opened_file_path": "/home/phongnguyen/GolandProjects/grpc-gateway/authentication/pb",
+    "node.js.detected.package.eslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "reference.settings.ide.settings.new.ui"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/authentication/pb" />
+      <recent name="$PROJECT_DIR$/gateway/pb" />
+      <recent name="$PROJECT_DIR$/gateway/pb/google/api" />
+      <recent name="$PROJECT_DIR$/authentication/middleware" />
+      <recent name="$PROJECT_DIR$/gateway" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
+      <recent name="$PROJECT_DIR$/authentication" />
+      <recent name="$PROJECT_DIR$/pd" />
+      <recent name="$PROJECT_DIR$/pd/auth" />
+      <recent name="$PROJECT_DIR$/pd/auth/auth" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Go Build.go build authentication">
+    <configuration name="go build authentication" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
+      <module name="grpc-gateway" />
+      <working_directory value="$PROJECT_DIR$/authentication" />
+      <kind value="PACKAGE" />
+      <package value="authentication" />
+      <directory value="$PROJECT_DIR$" />
+      <filePath value="$PROJECT_DIR$/authentication/main.go" />
+      <method v="2" />
+    </configuration>
+    <configuration name="go build gateway" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
+      <module name="grpc-gateway" />
+      <working_directory value="$PROJECT_DIR$/gateway" />
+      <kind value="PACKAGE" />
+      <package value="gateway" />
+      <directory value="$PROJECT_DIR$" />
+      <filePath value="$PROJECT_DIR$/gateway/main.go" />
+      <method v="2" />
+    </configuration>
+    <configuration name="go build user" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
+      <module name="grpc-gateway" />
+      <working_directory value="$PROJECT_DIR$/user" />
+      <kind value="PACKAGE" />
+      <package value="user" />
+      <directory value="$PROJECT_DIR$" />
+      <filePath value="$PROJECT_DIR$/user/main.go" />
+      <method v="2" />
+    </configuration>
+    <configuration name="run-local" type="MAKEFILE_TARGET_RUN_CONFIGURATION" factoryName="Makefile" temporary="true">
+      <makefile filename="$PROJECT_DIR$/Makefile" target="run-local" workingDirectory="" arguments="">
+        <envs />
+      </makefile>
+      <method v="2" />
+    </configuration>
+    <configuration default="true" type="docker-deploy" factoryName="docker-compose.yml" temporary="true">
+      <deployment type="docker-compose.yml">
+        <settings />
+      </deployment>
+      <method v="2" />
+    </configuration>
+    <configuration default="true" type="docker-deploy" factoryName="dockerfile" temporary="true">
+      <deployment type="dockerfile">
+        <settings />
+      </deployment>
+      <method v="2" />
+    </configuration>
+    <configuration name="docker-compose.yml.postgredb: Compose Deployment" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
+      <deployment type="docker-compose.yml">
+        <settings>
+          <option name="services">
+            <list>
+              <option value="postgredb" />
+            </list>
+          </option>
+          <option name="sourceFilePath" value="docker-compose.yml" />
+        </settings>
+      </deployment>
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Go Build.go build gateway" />
+        <item itemvalue="Go Build.go build user" />
+        <item itemvalue="Go Build.go build authentication" />
+        <item itemvalue="Makefile Target.run-local" />
+        <item itemvalue="Docker.docker-compose.yml.postgredb: Compose Deployment" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="init source code" />
+    <option name="LAST_COMMIT_MESSAGE" value="init source code" />
+  </component>
+  <component name="VgoProject">
+    <settings-migrated>true</settings-migrated>
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="DlvLineBreakpoint">
+          <url>file://$PROJECT_DIR$/authentication/middleware/populate_token.go</url>
+          <option name="timeStamp" value="6" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+</project>
